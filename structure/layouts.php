@@ -1,7 +1,7 @@
 <?php
 class layouts{
 
-  public function header($title){?>
+  public function head($title){?>
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -12,6 +12,13 @@ class layouts{
       </head>
       <body>
     <?php 
+
+    public function foot(){
+    ?>
+        </body>
+      </html>
+    <?php 
+    }
   }
 }
 ?>
