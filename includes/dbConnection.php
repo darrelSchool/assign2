@@ -31,6 +31,10 @@ class dbConnection{
     }
     
   }
+  public function add_request($name, $d_name, $email, $phone, $d_phone, $desc){
+    $sql = "INSERT INTO requests (name, date_name, email, phone, date_number, description) VALUES (?,?,?,?,?,?)";
+    $this->connection->prepare($sql)->execute([$name, $d_name, $email, $phone, $d_phone, $desc]);
+  }
 }
 
 ?>
