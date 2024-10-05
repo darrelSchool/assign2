@@ -25,6 +25,17 @@ class forms{
         />
       </div>
       <div>
+        <label for="email" class="form-label">Email: </label
+        ><input
+          class="form-control"
+          type="text"
+          name="email"
+          required
+          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+          placeholder="example@example.com"
+        />
+      </div>
+      <div>
         <label for="dates" class="form-label">Date's name: </label
         ><input
           class="form-control"
