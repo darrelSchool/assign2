@@ -13,4 +13,7 @@ function ClassAutoload($ClassName){
 }
 spl_autoload_register('ClassAutoload');
 
+// Creating instances of all classes
+    $ObjLayouts = new layouts();
+    $ObjForms = new forms();
 ?>
