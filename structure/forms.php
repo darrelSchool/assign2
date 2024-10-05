@@ -19,6 +19,8 @@ class forms{
           type="text"
           name="name"
           class="form-control"
+          required
+          pattern="[a-z]{4,20}"
           placeholder="Please enter your name"
         />
       </div>
@@ -28,6 +30,8 @@ class forms{
           class="form-control"
           type="text"
           name="dates"
+          required
+          pattern="[a-z]{4,20}"
           placeholder="Please enter their name"
         />
       </div>
@@ -36,6 +40,7 @@ class forms{
         ><input
           type="text"
           pattern="[0-9]{10}"
+          required
           name="p_no"
           class="form-control"
           placeholder="0712345678"
@@ -45,6 +50,7 @@ class forms{
         <label for="dates_no" class="form-label">Your date's number: </label
         ><input
           type="text"
+          required
           pattern="[0-9]{10}"
           class="form-control"
           name="dates_no"
@@ -55,6 +61,7 @@ class forms{
         <label for="desc" class="form-label">Description: </label
         ><textarea
           rows="4"
+          required
           class="form-control"
           cols="18"
           placeholder="Please write a description of your experience on your first date and why you are asking for a second."
