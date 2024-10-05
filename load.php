@@ -1,7 +1,7 @@
 <?php
 
 function ClassAutoload($ClassName){
-   $directories = ["structure"];
+   $directories = ["structure", "includes"];
 
    foreach($directories AS $dir){
         $FileName = dirname(__FILE__) . DIRECTORY_SEPARATOR . $dir .  DIRECTORY_SEPARATOR . $ClassName . '.php';
@@ -16,4 +16,5 @@ spl_autoload_register('ClassAutoload');
 // Creating instances of all classes
     $ObjLayouts = new layouts();
     $ObjForms = new forms();
+    $DbConn = new dbConnection();
 ?>
