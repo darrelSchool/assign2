@@ -16,5 +16,6 @@ spl_autoload_register('ClassAutoload');
 // Creating instances of all classes
     $ObjLayouts = new layouts();
     $ObjForms = new forms();
+    $ObjContents = new contents();
     $DbConn = new dbConnection("mysql", "localhost", 3306, "iap", "iap@2024", "darrel_157769");
 ?>

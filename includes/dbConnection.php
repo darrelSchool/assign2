@@ -35,6 +35,13 @@ class dbConnection{
     $sql = "INSERT INTO requests (name, date_name, email, phone, date_number, description) VALUES (?,?,?,?,?,?)";
     $this->connection->prepare($sql)->execute([$name, $d_name, $email, $phone, $d_phone, $desc]);
   }
+
+  public function get_user_content(){
+    $sql = "SELECT * FROM requests";
+    $stmt = $this->connection->prepare($sql);
+    $stmt->execute();
+    return $stmt;
+  }
 }
 
 ?>
