@@ -80,7 +80,24 @@ class forms{
         ></textarea>
       </div>
       <button type="submit" class="btn btn-primary my-4">Submit</button>
+    </form>
     <?php
   }
+    function verify_form($post, $verify){?>
+    <form action="verify_email.php" method="post">
+      <p>Check your email for the verification code</p>
+      <p>Enter the 6-digit code in the field below</p>
+      <input required type="text" name="verify_user" placeholder="123456" pattern="[0-9]{6}"/>
+      <button type="submit" class="btn btn-primary my-4">Submit</button>
+      <input hidden type="text" name="name" value="<?= $post['name']?>" />
+      <input hidden type="text" name="verify" value="<?= $verify ?>" />
+      <input hidden type="text" name="email" value="<?= $post['email']?>" />
+      <input hidden type="text" name="dates" value="<?= $post['dates']?>" />
+      <input hidden type="text" name="p_no" value="<?= $post['p_no']?>" />
+      <input hidden type="text" name="dates_no" value="<?= $post['dates_no']?>" />
+      <input hidden type="text" name="desc" value="<?= $post['desc']?>" />
+      
+    </form> 
+    <?php }
 }
 ?>

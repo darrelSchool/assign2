@@ -11,15 +11,17 @@ require 'load.php';
 //Create an instance; passing `true` enables exceptions
 //
 $mail = new PHPMailer(true);
-$verify = rand(10000, 99999);
+$verify = rand(100000, 999999);
 if (isset($_POST['verify'])){
   if ($_POST['verify_user'] == $_POST['verify']){
   $DbConn->add_request($_POST["name"], $_POST["dates"], $_POST[ "email" ], $_POST["p_no"], $_POST["dates_no"], $_POST["desc"]);
-  header("Location: ");
+  header("Location: index.php");
   exit;
-
   }
 }
+?> 
+<div hidden>
+<?php
 try {
   //Server settings
   $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
@@ -43,12 +45,14 @@ try {
 
   $mail->send();
 
-$ObjLayouts->head("Mars form");
-$ObjForms->verify_form($_POST, $verify);
-$ObjLayouts->foot();
   
 } catch (Exception $e) {
   echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 } 
-
+?> 
+</div>
+<?php
+$ObjLayouts->head("Mars form");
+$ObjForms->verify_form($_POST, $verify);
+$ObjLayouts->foot();
 ?>
