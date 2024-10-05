@@ -1,9 +1,9 @@
 <?php
 class forms{
-  function sign_up_form(){?>
+  function sign_up_form($handler){?>
     <h1>Second date update</h1>
     <form
-      action=""
+    action="<?= $handler ?>"
       method="post"
       style="
         padding: 24px;
@@ -20,7 +20,7 @@ class forms{
           name="name"
           class="form-control"
           required
-          pattern="[a-z]{4,20}"
+          pattern="[a-zA-Z]{4,20}"
           placeholder="Please enter your name"
         />
       </div>
@@ -42,7 +42,7 @@ class forms{
           type="text"
           name="dates"
           required
-          pattern="[a-z]{4,20}"
+          pattern="[a-zA-Z]{4,20}"
           placeholder="Please enter their name"
         />
       </div>
@@ -72,6 +72,7 @@ class forms{
         <label for="desc" class="form-label">Description: </label
         ><textarea
           rows="4"
+          name="desc"
           required
           class="form-control"
           cols="18"
