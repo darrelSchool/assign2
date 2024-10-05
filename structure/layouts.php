@@ -8,9 +8,9 @@ class layouts{
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?= $title ?></title>
-        <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
       </head>
-      <body>
+      <body style="padding: 64px">
     <?php 
     }
     public function foot(){
