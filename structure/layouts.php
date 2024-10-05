@@ -12,13 +12,12 @@ class layouts{
       </head>
       <body>
     <?php 
-
+    }
     public function foot(){
     ?>
         </body>
       </html>
     <?php 
     }
-  }
 }
 ?>
